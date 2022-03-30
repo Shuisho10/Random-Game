@@ -7,12 +7,11 @@ public class CameraController : MonoBehaviour
     public float xSens = 10f, ySens = 10f;
     bool inMenu;
     float xRotation, yRotation;
-    Transform playerTr;
+    [SerializeField] Transform playerTr;
     Camera cam;
 
     void Awake()
     {
-        playerTr = transform;
         cam = GetComponentInChildren<Camera>();
     }
 

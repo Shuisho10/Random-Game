@@ -5,8 +5,12 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
     public Transform camTr;
-    public Camera cam;
+    Camera cam;
 
+    void Awake()
+    {
+        cam = GetComponentInChildren<Camera>();
+    }
     void Update()
     {
         cam.transform.position = camTr.position;
