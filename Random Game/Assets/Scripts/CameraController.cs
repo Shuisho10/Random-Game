@@ -8,11 +8,12 @@ public class CameraController : MonoBehaviour
     bool inMenu;
     float xRotation, yRotation;
     Transform playerTr;
-    public Camera cam;
+    Camera cam;
 
     void Awake()
     {
         playerTr = transform;
+        cam = GetComponentInChildren<Camera>();
     }
 
     void Start()
